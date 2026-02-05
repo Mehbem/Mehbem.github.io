@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mechanical Design Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Mechanical Design</h1>
+    <p class="subtitle">CAD • Prototyping • Analysis</p>
+  </header>
+
+  <nav class="nav">
+    <button data-section="projects">Projects</button>
+    <button data-section="skills">Skills</button>
+    <button data-section="about">About</button>
+  </nav>
+
+  <main>
+    <section id="projects" class="panel active">
+      <h2>Projects</h2>
+      <div class="card">Robotic Gripper Design</div>
+      <div class="card">Biomechanics Linkage</div>
+      <div class="card">Thermal Housing Assembly</div>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <ul>
+        <li>SolidWorks / Fusion 360</li>
+        <li>FEA & Stress Analysis</li>
+        <li>Rapid Prototyping</li>
+      </ul>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About Me</h2>
+      <p>
+        Mechanical engineering student with a focus on design, motion, and
+        real-world problem solving.
+      </p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
