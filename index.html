@@ -1,49 +1,326 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mechanical Design Portfolio</title>
+  <title>Bera Yavuz | Mechanical Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1 class="logo">Mechanical Design</h1>
-    <p class="subtitle">CAD • Prototyping • Analysis</p>
-  </header>
-
-  <nav class="nav">
-    <button data-section="projects">Projects</button>
-    <button data-section="skills">Skills</button>
-    <button data-section="about">About</button>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-logo">BY</div>
+      <div class="nav-links">
+        <button class="nav-btn" data-section="home">Home</button>
+        <button class="nav-btn" data-section="about">About Me</button>
+        <button class="nav-btn" data-section="portfolio">Portfolio</button>
+        <button class="nav-btn" data-section="contact">Contact</button>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section id="projects" class="panel active">
-      <h2>Projects</h2>
-      <div class="card">Robotic Gripper Design</div>
-      <div class="card">Biomechanics Linkage</div>
-      <div class="card">Thermal Housing Assembly</div>
+  <main class="main-content">
+    
+    <!-- Decorative mechanical elements -->
+    <div class="mechanical-decor">
+      <!-- Hex Nut 1 -->
+      <svg class="hex-nut hex-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 85,25 85,65 50,85 15,65 15,25" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <polygon points="50,20 70,32 70,56 50,68 30,56 30,32" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="50" cy="44" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="50" y1="5" x2="50" y2="20" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="85" y1="25" x2="70" y2="32" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="85" y1="65" x2="70" y2="56" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="50" y1="85" x2="50" y2="68" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="15" y1="65" x2="30" y2="56" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="15" y1="25" x2="30" y2="32" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      
+      <!-- Hex Nut 2 -->
+      <svg class="hex-nut hex-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,10 80,28 80,62 50,80 20,62 20,28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <polygon points="50,22 68,33 68,55 50,66 32,55 32,33" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="50" cy="44" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <line x1="50" y1="10" x2="50" y2="22" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="80" y1="28" x2="68" y2="33" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="80" y1="62" x2="68" y2="55" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="50" y1="80" x2="50" y2="66" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="20" y1="62" x2="32" y2="55" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="20" y1="28" x2="32" y2="33" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      
+      <!-- Digital Caliper - Real Vernier Caliper SVG -->
+      <div class="caliper">
+        <object data="Vernier_Caliper_150mm.svg" type="image/svg+xml" class="caliper-svg">
+          </svg>
+        </object>
+        
+        <!-- LED power indicator on caliper -->
+        <div class="caliper-led"></div>
+        
+        <!-- Digital display overlay -->
+        <div class="caliper-digital-display">
+          <span class="display-value">2.02</span>
+          <span class="display-unit">mm</span>
+        </div>
+      </div>
+      
+      <div class="led-indicator led-1"></div>
+      <div class="led-indicator led-2"></div>
+      <div class="led-indicator led-3"></div>
+    </div>
+    
+    <!-- HOME SECTION -->
+    <section id="home" class="section active">
+      <div class="home-grid">
+        <div class="home-text">
+          <h1 class="main-title">Bera Yavuz</h1>
+          <div class="title-accent"></div>
+          <p class="lead-text">Nanotechnology Engineering Student </p>
+          <p class="institution">University of Waterloo | Class of 2028</p>
+          
+          <div class="home-specialties">
+            <span class="specialty-tag">CAD & Mechanical Design</span>
+            <span class="specialty-tag">Engineering Automation</span>
+            <span class="specialty-tag">CAM </span>
+            <span class="specialty-tag">CNC Machining </span>
+            <span class="specialty-tag">Precision Systems</span>
+            <span class="specialty-tag">Fixture Design</span>
+            <span class="specialty-tag">Laser & Optics</span>
+            <span class="specialty-tag">Cross-Disciplinary R&D</span>
+          </div>
+
+          <p class="home-description">
+  I’m currently a <strong>Nanotechnology Engineering student</strong> at the University of Waterloo, 
+  with a growing specialization in <strong>mechanical design</strong> and 
+  <strong>precision hardware development</strong>. While my academic background is rooted in nanotechnology, 
+  my hands-on experience is centered around building real mechanical systems—from 
+  <strong>concept to fabrication</strong>.
+  <br><br>
+  I am currently working at <strong>Irradiant Technologies</strong>, where I began as a 
+  <strong>Photolithography R&amp;D Intern</strong> and have since transitioned into a 
+  <strong>Mechanical R&amp;D role</strong>. My work involves <strong>rapid prototyping</strong>, 
+  <strong>CNC machining</strong>, fixture design, and engineering automation, supporting both experimental 
+  development and product manufacturing in advanced photonics systems.
+  <br><br>
+  Previously, I conducted research at the <strong>Institute for Quantum Computing</strong>, working on 
+  <strong>nanophotonics</strong> and quantum technology with the goal of enabling scalable quantum repeater 
+  systems. Through this experience, I developed a strong foundation in precision experimentation, 
+  optical hardware integration, and interdisciplinary engineering problem-solving.
+  <br><br>
+  Across both industry and research environments, I enjoy bridging <strong>design and fabrication</strong> 
+  to create functional, high-performance engineering solutions.
+</p>
+
+          <div class="home-cta">
+            <button class="cta-btn primary" data-section="portfolio">View Projects</button>
+            <button class="cta-btn secondary" data-section="contact">Get in Touch</button>
+          </div>
+        </div>
+
+        <div class="home-photo">
+          <div class="photo-container">
+            <div class="photo-placeholder">
+                <img src="Home Page Photo.jpg" alt="Bera Yavuz" class="profile-photo">
+            </div>
+          </div>
+          <div class="photo-accent"></div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="panel">
-      <h2>Skills</h2>
-      <ul>
-        <li>SolidWorks / Fusion 360</li>
-        <li>FEA & Stress Analysis</li>
-        <li>Rapid Prototyping</li>
-      </ul>
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-accent"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-main">
+          <p class="about-intro">
+            I'm a mechanical engineering student driven by curiosity and a love for 
+            problem-solving through design. My journey combines theoretical knowledge 
+            with hands-on experience in prototyping and analysis.
+          </p>
+
+          <div class="subsection-grid">
+            <div class="subsection-card">
+              <h3>Education</h3>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link">Degree Program Details</a></li>
+                <li><a href="#" class="subsection-link">Relevant Coursework</a></li>
+                <li><a href="#" class="subsection-link">Academic Achievements</a></li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h3>Experience</h3>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link">Internships</a></li>
+                <li><a href="#" class="subsection-link">Research Projects</a></li>
+                <li><a href="#" class="subsection-link">Lab Work</a></li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h3>Interests</h3>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link">Design Philosophy</a></li>
+                <li><a href="#" class="subsection-link">Side Projects</a></li>
+                <li><a href="#" class="subsection-link">Publications & Writing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="panel">
-      <h2>About Me</h2>
-      <p>
-        Mechanical engineering student with a focus on design, motion, and
-        real-world problem solving.
-      </p>
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="section-accent"></div>
+      </div>
+
+      <div class="portfolio-content">
+        <div class="portfolio-intro">
+          <p>A collection of projects showcasing design, analysis, and prototyping work.</p>
+        </div>
+
+        <div class="subsection-grid">
+          <div class="subsection-card project-card">
+            <div class="project-number">01</div>
+            <h3>CAD Projects</h3>
+            <p class="card-description">Detailed 3D modeling and assemblies</p>
+            <ul class="link-list">
+              <li><a href="#" class="subsection-link">Robotic Gripper Design</a></li>
+              <li><a href="#" class="subsection-link">Biomechanics Linkage</a></li>
+              <li><a href="#" class="subsection-link">Thermal Housing Assembly</a></li>
+              <li><a href="#" class="subsection-link">Custom Fixtures</a></li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">02</div>
+            <h3>Analysis Work</h3>
+            <p class="card-description">FEA and simulation studies</p>
+            <ul class="link-list">
+              <li><a href="#" class="subsection-link">Stress Analysis Studies</a></li>
+              <li><a href="#" class="subsection-link">Thermal Simulations</a></li>
+              <li><a href="#" class="subsection-link">Motion Analysis</a></li>
+              <li><a href="#" class="subsection-link">Optimization Reports</a></li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">03</div>
+            <h3>Prototyping</h3>
+            <p class="card-description">Physical builds and testing</p>
+            <ul class="link-list">
+              <li><a href="#" class="subsection-link">3D Printed Components</a></li>
+              <li><a href="#" class="subsection-link">CNC Machined Parts</a></li>
+              <li><a href="#" class="subsection-link">Test Fixtures</a></li>
+              <li><a href="#" class="subsection-link">Assembly Documentation</a></li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">04</div>
+            <h3>Team Projects</h3>
+            <p class="card-description">Collaborative design work</p>
+            <ul class="link-list">
+              <li><a href="#" class="subsection-link">Senior Capstone</a></li>
+              <li><a href="#" class="subsection-link">Competition Entries</a></li>
+              <li><a href="#" class="subsection-link">Club Projects</a></li>
+              <li><a href="#" class="subsection-link">Hackathons</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- CONTACT/RESUME SECTION -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Contact & Resume</h2>
+        <div class="section-accent"></div>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-grid">
+          <div class="contact-main">
+            <h3>Let's Connect</h3>
+            <p class="contact-intro">
+              Interested in collaboration, opportunities, or just want to chat about 
+              mechanical design? I'd love to hear from you.
+            </p>
+
+            <div class="subsection-card">
+              <h4>Contact Information</h4>
+              <ul class="link-list contact-list">
+                <li>
+                  <span class="contact-label">Email:</span>
+                  <a href="mailto:your.email@example.com" class="subsection-link">your.email@example.com</a>
+                </li>
+                <li>
+                  <span class="contact-label">LinkedIn:</span>
+                  <a href="#" class="subsection-link">linkedin.com/in/berayavuz</a>
+                </li>
+                <li>
+                  <span class="contact-label">GitHub:</span>
+                  <a href="#" class="subsection-link">github.com/mehbem</a>
+                </li>
+                <li>
+                  <span class="contact-label">Phone:</span>
+                  <a href="tel:+1234567890" class="subsection-link">+1 (234) 567-8900</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h3>Resume & Documents</h3>
+            
+            <div class="subsection-card">
+              <h4>Download</h4>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link download-link">Resume (PDF)</a></li>
+                <li><a href="#" class="subsection-link download-link">Portfolio Booklet</a></li>
+                <li><a href="#" class="subsection-link download-link">Transcript</a></li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h4>Online Profiles</h4>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link">LinkedIn Profile</a></li>
+                <li><a href="#" class="subsection-link">GitHub Repositories</a></li>
+                <li><a href="#" class="subsection-link">Behance Portfolio</a></li>
+              </ul>
+            </div>
+
+            <div class="subsection-card">
+              <h4>References</h4>
+              <ul class="link-list">
+                <li><a href="#" class="subsection-link">Request References</a></li>
+                <li><a href="#" class="subsection-link">Recommendation Letters</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Bera Yavuz. All rights reserved.</p>
+  </footer>
 
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="script.js"></script>
