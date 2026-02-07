@@ -150,8 +150,8 @@ body::after {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  gap: 3rem;
+  align-items: start;
   min-height: calc(100vh - 200px);
   padding: 2rem 0;
 }
@@ -162,10 +162,10 @@ body::after {
 
 .main-title {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 0.9;
-  letter-spacing: -3px;
-  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: -0.3rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent-lime) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -202,14 +202,14 @@ body::after {
 }
 
 .lead-text {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 200;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .institution {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-dim);
   margin-bottom: 2rem;
 }
@@ -228,7 +228,7 @@ body::after {
   border: 1px solid var(--primary);
   color: var(--primary);
   padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -262,11 +262,12 @@ body::after {
 }
 
 .home-description {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   line-height: 1.8;
   color: var(--text-secondary);
+  margin-top: 0rem;
   margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 550px;
 }
 
 .home-cta {
@@ -315,7 +316,8 @@ body::after {
   position: relative;
   animation: slideInRight 0.8s ease-out;
   scale: 0.8;
-  left: -200px; /* shifts it slightly left */
+  left: -150px; /* shifts it slightly left */
+  bottom: 75px; /* shifts it slightly down */
 }
 
 .photo-container {
@@ -708,8 +710,8 @@ body::after {
 .caliper {
   position: absolute;
   width: 630px;
-  top: 40%;
-  left: 70%;
+  top: 45%;
+  left: 72%;
   opacity: 0.3;
   filter: drop-shadow(0 0 20px var(--glow-green));
   animation: float-caliper 12s ease-in-out infinite;
@@ -879,81 +881,10 @@ body::after {
 }
 
 .led-3 {
-  bottom: 20%;
-  right: 75%;
+  bottom: 10%;
+  right: 55%;
   animation: blink-led 2.5s ease-in-out infinite 1s;
 }
-
-
-/* ===== DIODE LED COMPONENTS ===== */
-.led-diode {
-  position: absolute;
-  width: 40px;        /* Size of the diode */
-  height: 40px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Position diodes below their corresponding LEDs */
-.diode-1 {
-  top: calc(25% + 20px);    /* Below LED-1 */
-  left: calc(5% - 14px);    /* Centered under LED */
-}
-
-.diode-2 {
-  top: calc(60% + 20px);    /* Below LED-2 */
-  right: calc(15% - 14px);  /* Centered under LED */
-}
-
-.diode-3 {
-  bottom: calc(30% - 60px); /* Below LED-3 */
-  right: calc(8% - 14px);   /* Centered under LED */
-}
-
-/* ===== CUSTOMIZE DIODE COLORS HERE ===== */
-
-/* DIODE 1: Green (matches the theme) */
-.diode-1 .diode-svg,
-.diode-1 object,
-.diode-1 svg {
-  width: 100%;
-  height: auto;
-  color: var(--primary);  /* Color: Green */
-  /* Glow effect - change the color in drop-shadow to match */
-  filter: brightness(1.5) hue-rotate(90deg) saturate(3) drop-shadow(0 0 10px var(--primary));
-}
-
-/* DIODE 2: Cyan/Blue */
-.diode-2 .diode-svg,
-.diode-2 object,
-.diode-2 svg {
-  width: 100%;
-  height: auto;
-  color: #00ffff;     /* Color: Cyan - CUSTOMIZE THIS */
-  /* Glow effect - CUSTOMIZE drop-shadow color to match */
-  filter: brightness(1.5) hue-rotate(180deg) saturate(3) drop-shadow(0 0 10px #00ffff);
-}
-
-/* DIODE 3: Purple/Magenta */
-.diode-3 .diode-svg,
-.diode-3 object,
-.diode-3 svg {
-  width: 100%;
-  height: auto;
-  color: #ff00ff;     /* Color: Purple - CUSTOMIZE THIS */
-  /* Glow effect - CUSTOMIZE drop-shadow color to match */
-  filter: brightness(1.5) hue-rotate(270deg) saturate(3) drop-shadow(0 0 10px #ff00ff);
-}
-
-/* DIODE COLOR QUICK REFERENCE:
-   Green: hue-rotate(90deg)   color: #00ff41
-   Cyan:  hue-rotate(180deg)  color: #00ffff
-   Blue:  hue-rotate(210deg)  color: #0088ff
-   Purple: hue-rotate(270deg) color: #ff00ff
-   Red:   hue-rotate(330deg)  color: #ff0033
-   Orange: hue-rotate(30deg)  color: #ff6600
-   Yellow: hue-rotate(60deg)  color: #ffff00
-*/
 
 
 /* ===== RESPONSIVE ===== */
