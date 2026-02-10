@@ -152,13 +152,21 @@ body::after {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "text photo"
+    "text cta";
+grid-template-rows: auto auto;
   gap: 3rem;
   align-items: start;
-  min-height: calc(100vh - 200px);
-  padding: 2rem 0;
+  min-height: auto;
+padding: 1rem 0;
 }
 
 .home-text {
+  grid-area: text;
+
   animation: slideInLeft 0.8s ease-out;
 }
 
@@ -319,7 +327,8 @@ body::after {
   animation: slideInRight 0.8s ease-out;
   scale: 0.8;
   left: -150px; /* shifts it slightly left */
-  bottom: 75px; /* shifts it slightly down */
+  bottom: 40px;
+/* shifts it slightly down */
 }
 
 .photo-container {
@@ -893,6 +902,7 @@ body::after {
 @media (max-width: 1024px) {
   .home-grid {
     grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
     gap: 3rem;
   }
 
@@ -1300,4 +1310,129 @@ body::after {
   .floating-symbols {
     display: none;
   }
+}
+
+
+/* ===== CTA BUTTONS UNDER PHOTO ===== */
+.home-cta.under-photo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+justify-content: center;
+}
+
+
+/* ===== HOME GRID PLACEMENT: CTA UNDER PHOTO ===== */
+.home-photo {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.home-cta.under-photo {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20; /* ensure above decorative accents */
+  transform: translate(-195px, -130px);
+}
+
+
+@media (max-width: 1024px) {
+  .home-photo { grid-column: 1; grid-row: 2; }
+  .home-cta.under-photo { grid-column: 1; grid-row: 3; }
+}
+
+/* ===== HOME GRID AREAS (robust placement) ===== */
+.home-photo { grid-area: photo; }
+.home-cta.under-photo { grid-area: cta; }
+
+@media (max-width: 1024px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "text"
+      "photo"
+      "cta";
+  }
+}
+
+/* ===== HOME SECTION SPACING (NO INITIAL SCROLL) ===== */
+#home.section.active {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+
+
+
+}
+
+
+/* ===== RESUME HERO POSTER (IMAGE PREVIEW) ===== */
+.resume-viewer.poster {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.resume-poster-link {
+  display: block;
+  text-decoration: none;
+  transform: translateY(-150px);
+}
+
+/* Caption text */
+.resume-poster-link::before {
+  content: "Resume · Click to download, I know you want to :)";
+  position: absolute;
+  top: -42px;          /* distance ABOVE the poster */
+  left: 0;
+
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: var(--primary);
+  opacity: 0.85;
+
+  text-shadow:
+    0 0 12px rgba(0, 255, 65, 0.4);
+
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Caption reacts together with hover */
+.resume-poster-link:hover::before {
+  transform: translateY(-6px);
+  opacity: 1;
+}
+
+.resume-poster {
+  width: 100%;
+  height: auto;
+  max-height: min(78vh, 880px);
+  object-fit: contain;
+  display: block;
+
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 rgba(0, 0, 0, 0.65),
+    0 0 55px rgba(0, 255, 65, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resume-poster-link:hover .resume-poster {
+  transform: translateY(-20px);
+  box-shadow:
+    0 30px 5px rgba(0, 0, 0, 0.7),
+    0 0 75px rgba(0, 255, 65, 0.22);
 }
