@@ -138,6 +138,8 @@ body::after {
   width: 100%;
   padding: 4rem 2rem;
   min-height: calc(100vh - 80px);
+  position: relative;
+  z-index: 10;
 }
 
 .section.active {
@@ -948,5 +950,354 @@ body::after {
 
   .cta-btn {
     width: 100%;
+  }
+}
+
+/* ===== FLOATING MECHANICAL SYMBOLS ===== */
+.floating-symbols {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.float-symbol {
+  position: absolute;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 8px var(--glow-green);
+}
+
+.float-symbol sub {
+  font-size: 0.6em;
+}
+
+/* Individual symbol styling and animations */
+.symbol-1 {
+  font-size: 2rem;
+  top: 15%;
+  left: -5%;
+  animation: float-in-1 20s ease-in-out infinite;
+}
+
+.symbol-2 {
+  font-size: 1.8rem;
+  top: 45%;
+  left: -5%;
+  animation: float-in-2 25s ease-in-out infinite 3s;
+}
+
+.symbol-3 {
+  font-size: 2.2rem;
+  top: 75%;
+  left: -5%;
+  animation: float-in-3 22s ease-in-out infinite 7s;
+}
+
+.symbol-4 {
+  font-size: 1.7rem;
+  top: 30%;
+  right: -5%;
+  animation: float-in-4 24s ease-in-out infinite 5s;
+}
+
+.symbol-5 {
+  font-size: 2rem;
+  top: 60%;
+  right: -5%;
+  animation: float-in-5 26s ease-in-out infinite 10s;
+}
+
+.symbol-6 {
+  font-size: 1.9rem;
+  top: 85%;
+  right: -5%;
+  animation: float-in-6 23s ease-in-out infinite 2s;
+}
+
+.symbol-7 {
+  font-size: 2.1rem;
+  top: 20%;
+  left: -5%;
+  animation: float-in-7 27s ease-in-out infinite 8s;
+}
+
+.symbol-8 {
+  font-size: 1.8rem;
+  top: 55%;
+  left: -5%;
+  animation: float-in-8 21s ease-in-out infinite 12s;
+}
+
+.symbol-9 {
+  font-size: 1.9rem;
+  top: 40%;
+  right: -5%;
+  animation: float-in-9 28s ease-in-out infinite 6s;
+}
+
+.symbol-10 {
+  font-size: 2rem;
+  top: 70%;
+  right: -5%;
+  animation: float-in-10 24s ease-in-out infinite 14s;
+}
+
+.symbol-11 {
+  font-size: 1.7rem;
+  top: 10%;
+  right: -5%;
+  animation: float-in-11 25s ease-in-out infinite 4s;
+}
+
+.symbol-12 {
+  font-size: 2.1rem;
+  top: 90%;
+  left: -5%;
+  animation: float-in-12 23s ease-in-out infinite 9s;
+}
+
+/* Float-in animations from left */
+@keyframes float-in-1 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  10% {
+    opacity: 0.15;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+  90% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes float-in-2 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.9) rotate(0deg);
+  }
+  15% {
+    opacity: 0.18;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.25;
+    transform: scale(1) rotate(15deg);
+  }
+  85% {
+    opacity: 0.18;
+  }
+}
+
+@keyframes float-in-3 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  12% {
+    opacity: 0.2;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.22;
+    transform: scale(1.2);
+  }
+  88% {
+    opacity: 0.2;
+  }
+}
+
+/* Float-in animations from right */
+@keyframes float-in-4 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  10% {
+    opacity: 0.17;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.23;
+    transform: scale(1.15);
+  }
+  90% {
+    opacity: 0.17;
+  }
+}
+
+@keyframes float-in-5 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.9) rotate(0deg);
+  }
+  15% {
+    opacity: 0.19;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.24;
+    transform: scale(1.05) rotate(-12deg);
+  }
+  85% {
+    opacity: 0.19;
+  }
+}
+
+@keyframes float-in-6 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  12% {
+    opacity: 0.16;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.21;
+    transform: scale(1.1);
+  }
+  88% {
+    opacity: 0.16;
+  }
+}
+
+@keyframes float-in-7 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.25;
+    transform: scale(1.2) rotate(10deg);
+  }
+  90% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes float-in-8 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  15% {
+    opacity: 0.18;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.22;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 0.18;
+  }
+}
+
+@keyframes float-in-9 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.85) rotate(0deg);
+  }
+  10% {
+    opacity: 0.19;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.24;
+    transform: scale(1.1) rotate(-8deg);
+  }
+  90% {
+    opacity: 0.19;
+  }
+}
+
+@keyframes float-in-10 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  12% {
+    opacity: 0.17;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.23;
+    transform: scale(1.15);
+  }
+  88% {
+    opacity: 0.17;
+  }
+}
+
+@keyframes float-in-11 {
+  0%, 100% {
+    right: -10%;
+    opacity: 0;
+    transform: scale(0.9) rotate(0deg);
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    right: 110%;
+    opacity: 0.25;
+    transform: scale(1.05) rotate(15deg);
+  }
+  90% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes float-in-12 {
+  0%, 100% {
+    left: -10%;
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  15% {
+    opacity: 0.16;
+  }
+  50% {
+    left: 110%;
+    opacity: 0.21;
+    transform: scale(1.2);
+  }
+  85% {
+    opacity: 0.16;
+  }
+}
+
+/* Hide symbols on mobile to reduce visual clutter */
+@media (max-width: 768px) {
+  .floating-symbols {
+    display: none;
   }
 }
