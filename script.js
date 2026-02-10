@@ -1,13 +1,15 @@
 // Navigation functionality
 const navButtons = document.querySelectorAll('.nav-btn');
 const ctaButtons = document.querySelectorAll('.cta-btn');
+const dataSectionLinks = document.querySelectorAll('[data-section]:not(.nav-btn):not(.cta-btn)');
 const sections = document.querySelectorAll('.section');
 
 // Combine all navigation triggers
-const allNavTriggers = [...navButtons, ...ctaButtons];
+const allNavTriggers = [...navButtons, ...ctaButtons, ...dataSectionLinks];
 
 allNavTriggers.forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
+    if (btn.tagName === 'A') e.preventDefault();
     const targetSection = btn.dataset.section;
     
     // Remove active class from all sections
@@ -186,7 +188,59 @@ function updateActiveNavButton() {
 // Call on page load and after navigation
 window.addEventListener('load', updateActiveNavButton);
 allNavTriggers.forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
+    if (btn.tagName === 'A') e.preventDefault();
     setTimeout(updateActiveNavButton, 100);
   });
 });
+
+
+
+// ===== LIVE AGE TIMER (About section) =====
+(function () {
+  const el = document.getElementById('age-timer');
+  if (!el) return;
+
+  // Birth: July 12, 2005 at 11:00 AM America/New_York
+  const birth = new Date('2005-07-12T11:00:00-04:00');
+
+  function addYears(date, years) {
+    const d = new Date(date.getTime());
+    d.setFullYear(d.getFullYear() + years);
+    return d;
+  }
+
+  function updateAgeTimer() {
+    const now = new Date();
+
+    let years = 0;
+    while (addYears(birth, years + 1) <= now) years++;
+
+    const afterYears = addYears(birth, years);
+    let remainingMs = now - afterYears;
+
+    const msPerSecond = 1000;
+    const msPerMinute = msPerSecond * 60;
+    const msPerHour = msPerMinute * 60;
+    const msPerDay = msPerHour * 24;
+
+    const days = Math.floor(remainingMs / msPerDay);
+    remainingMs -= days * msPerDay;
+
+    const hours = Math.floor(remainingMs / msPerHour);
+    remainingMs -= hours * msPerHour;
+
+    const minutes = Math.floor(remainingMs / msPerMinute);
+    remainingMs -= minutes * msPerMinute;
+
+    const seconds = Math.floor(remainingMs / msPerSecond);
+
+    const pad2 = (n) => String(n).padStart(2, '0');
+
+    el.textContent = `${years} years, ${days} days, ${hours}h ${pad2(minutes)}m ${pad2(seconds)}s`;
+  }
+
+  updateAgeTimer();
+  setInterval(updateAgeTimer, 1000);
+})();
+

@@ -17,6 +17,7 @@
       <div class="nav-links">
         <button class="nav-btn" data-section="home">Home</button>
         <button class="nav-btn" data-section="about">About Me</button>
+        <button class="nav-btn" data-section="experience">Experience</button>
         <button class="nav-btn" data-section="portfolio">Portfolio</button>
         <button class="nav-btn" data-section="contact">Contact</button>
       </div>
@@ -156,43 +157,116 @@ scalable research toward quantum repeater technologies.
 
       <div class="about-content">
         <div class="about-main">
+          
           <p class="about-intro">
-            I'm a mechanical engineering student driven by curiosity and a love for 
-            problem-solving through design. My journey combines theoretical knowledge 
-            with hands-on experience in prototyping and analysis.
+            Hey — I’m <strong>Bera Yavuz</strong>. I was born and raised in the small city of <strong>Waterloo, Ontario</strong>, and I’ve basically been here my whole life.
+            If you want the painfully precise version, I’ve been here for <strong><span id="age-timer" aria-live="polite">loading…</span></strong>.
+            <br><br>
+            I’m currently a <strong>Nanotechnology Engineering</strong> student at the <strong>University of Waterloo</strong>, but my happy place is anything
+            involving <strong>mechanical design</strong>, <strong>prototyping</strong>, and turning ideas into real parts.
+            I bought myself a 3D printer, an <em>unreasonably</em> expensive caliper, and I’m trying very hard not to impulse-buy a desktop CNC next.
+            <br><br>
+            I’m ethnically <strong>Turkish</strong>, so yes — I can speak it. Outside of engineering, I’m big on climbing (I literally only climb),
+            biking when I remember, running when I’m feeling brave, and lately: bargain-hunting for surprisingly good books at Indigo.
+            <br><br>
+            This website is built from scratch with a chaotic combo of free tools and AI assistants — so if you find bugs (you will), please tell me.
+            I’ll fix them and pretend it was part of the plan 🙂
           </p>
 
           <div class="subsection-grid">
             <div class="subsection-card">
               <h3>Education</h3>
               <ul class="link-list">
-                <li><a href="#" class="subsection-link">Degree Program Details</a></li>
-                <li><a href="#" class="subsection-link">Relevant Coursework</a></li>
-                <li><a href="#" class="subsection-link">Academic Achievements</a></li>
+                <li><a href="#" class="subsection-link" data-section="experience" title="Education & timeline">Degree Program Details</a></li>
+                <li><a href="#" class="subsection-link" data-section="portfolio" title="Projects that taught me the most">Relevant Coursework</a></li>
+                <li><a href="#" class="subsection-link" data-section="contact" title="Resume + links">Academic Achievements</a></li>
               </ul>
             </div>
 
             <div class="subsection-card">
               <h3>Experience</h3>
               <ul class="link-list">
-                <li><a href="#" class="subsection-link">Internships</a></li>
-                <li><a href="#" class="subsection-link">Research Projects</a></li>
-                <li><a href="#" class="subsection-link">Lab Work</a></li>
+                <li><a href="#" class="subsection-link" data-section="experience" title="Internships & roles">Internships</a></li>
+                <li><a href="#" class="subsection-link" data-section="experience" title="Research work">Research Projects</a></li>
+                <li><a href="#" class="subsection-link" data-section="experience" title="Fabrication & lab">Lab Work</a></li>
               </ul>
             </div>
 
             <div class="subsection-card">
               <h3>Interests</h3>
               <ul class="link-list">
-                <li><a href="#" class="subsection-link">Design Philosophy</a></li>
-                <li><a href="#" class="subsection-link">Side Projects</a></li>
-                <li><a href="#" class="subsection-link">Publications & Writing</a></li>
+                <li><a href="#" class="subsection-link" data-section="portfolio" title="How I build">Design Philosophy</a></li>
+                <li><a href="#" class="subsection-link" data-section="portfolio" title="Side builds">Side Projects</a></li>
+                <li><a href="#" class="subsection-link" data-section="experience" title="Publications">Publications & Writing</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-accent"></div>
+      </div>
+
+      <div class="portfolio-content">
+        <div class="portfolio-intro">
+          <p>Internships, research, and the hands-on work I’ve done so far.</p>
+        </div>
+
+        <div class="subsection-grid">
+          <div class="subsection-card project-card">
+            <div class="project-number">01</div>
+            <h3>Irradiant Technologies</h3>
+            <p class="card-description"><strong>Mechanical R&amp;D Intern</strong> · Jan 2026 – Apr 2026 · Greater Boston, MA</p>
+            <ul class="link-list">
+              <li>Designed and fabricated vibration-isolated optical enclosures to reduce noise and improve measurement stability.</li>
+              <li>CAD-modeled and rendered a two-photon lithography optical setup supporting an SPIE Photonics West publication.</li>
+              <li>Designed and CNC-machined a custom vacuum chuck for precision fixturing of proprietary scaffold materials.</li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">02</div>
+            <h3>Irradiant Technologies</h3>
+            <p class="card-description"><strong>Photolithography R&amp;D Intern</strong> · Sept 2025 – Dec 2025 · Greater Boston, MA</p>
+            <ul class="link-list">
+              <li>Optimized photolithography exposure processes to improve resist performance and print uniformity.</li>
+              <li>Designed and manufactured mechanical components for printing and post-processing systems.</li>
+              <li>Built software for 3-axis stage characterization to improve alignment accuracy.</li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">03</div>
+            <h3>Institute for Quantum Computing (IQC)</h3>
+            <p class="card-description"><strong>Quantum Photonics R&amp;D Assistant</strong> · Jan 2025 – Apr 2025 · Waterloo, ON</p>
+            <ul class="link-list">
+              <li>Built custom optical assemblies for laser locking (DAVLL).</li>
+              <li>Designed and 3D-printed mounts for fiber routing and optical amplifier integration.</li>
+              <li>Automated fine-structure splitting analysis with single-photon counting instrumentation.</li>
+            </ul>
+          </div>
+
+          <div class="subsection-card project-card">
+            <div class="project-number">04</div>
+            <h3>Institute for Quantum Computing (IQC)</h3>
+            <p class="card-description"><strong>Quantum Photonics R&amp;D Assistant</strong> · May 2024 – Aug 2024 · Waterloo, ON</p>
+            <ul class="link-list">
+              <li>Developed MATLAB algorithms to detect nanostructures in experimental imaging data.</li>
+              <li>Automated experimental control via serial communication with stages, lasers, and spectrometers.</li>
+              <li>Increased experimental throughput by ~300× (up to 174 quantum dots/hour).</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
 
     <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="section">
