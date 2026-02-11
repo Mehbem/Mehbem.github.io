@@ -995,84 +995,84 @@ padding: 1rem 0;
   font-size: 2rem;
   top: 15%;
   left: -5%;
-  animation: float-in-1 20s ease-in-out infinite;
+  animation: float-in-1 60s ease-in-out infinite;
 }
 
 .symbol-2 {
   font-size: 1.8rem;
   top: 45%;
   left: -5%;
-  animation: float-in-2 25s ease-in-out infinite 3s;
+  animation: float-in-2 60s ease-in-out infinite 3s;
 }
 
 .symbol-3 {
   font-size: 2.2rem;
   top: 75%;
   left: -5%;
-  animation: float-in-3 22s ease-in-out infinite 7s;
+  animation: float-in-3 60s ease-in-out infinite 7s;
 }
 
 .symbol-4 {
   font-size: 1.7rem;
   top: 30%;
   right: -5%;
-  animation: float-in-4 24s ease-in-out infinite 5s;
+  animation: float-in-4 60s ease-in-out infinite 5s;
 }
 
 .symbol-5 {
   font-size: 2rem;
   top: 60%;
   right: -5%;
-  animation: float-in-5 26s ease-in-out infinite 10s;
+  animation: float-in-5 60s ease-in-out infinite 10s;
 }
 
 .symbol-6 {
   font-size: 1.9rem;
   top: 85%;
   right: -5%;
-  animation: float-in-6 23s ease-in-out infinite 2s;
+  animation: float-in-6 60s ease-in-out infinite 2s;
 }
 
 .symbol-7 {
   font-size: 2.1rem;
   top: 20%;
   left: -5%;
-  animation: float-in-7 27s ease-in-out infinite 8s;
+  animation: float-in-7 60s ease-in-out infinite 8s;
 }
 
 .symbol-8 {
   font-size: 1.8rem;
   top: 55%;
   left: -5%;
-  animation: float-in-8 21s ease-in-out infinite 12s;
+  animation: float-in-8 60s ease-in-out infinite 12s;
 }
 
 .symbol-9 {
   font-size: 1.9rem;
   top: 40%;
   right: -5%;
-  animation: float-in-9 28s ease-in-out infinite 6s;
+  animation: float-in-9 60s ease-in-out infinite 6s;
 }
 
 .symbol-10 {
   font-size: 2rem;
   top: 70%;
   right: -5%;
-  animation: float-in-10 24s ease-in-out infinite 14s;
+  animation: float-in-10 60s ease-in-out infinite 14s;
 }
 
 .symbol-11 {
   font-size: 1.7rem;
   top: 10%;
   right: -5%;
-  animation: float-in-11 25s ease-in-out infinite 4s;
+  animation: float-in-11 60s ease-in-out infinite 4s;
 }
 
 .symbol-12 {
   font-size: 2.1rem;
   top: 90%;
   left: -5%;
-  animation: float-in-12 23s ease-in-out infinite 9s;
+  animation: float-in-12 60s ease-in-out infinite 9s;
 }
 
 /* Float-in animations from left */
