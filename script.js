@@ -244,3 +244,16 @@ allNavTriggers.forEach(btn => {
   setInterval(updateAgeTimer, 1000);
 })();
 
+// ===== HOME PHOTO AUTO ROTATION =====
+(function () {
+  const photos = document.querySelectorAll('.profile-photo');
+  if (!photos.length) return;
+
+  let current = 0;
+
+  setInterval(() => {
+    photos[current].classList.remove('active');
+    current = (current + 1) % photos.length;
+    photos[current].classList.add('active');
+  }, 5000); // 5 seconds
+})();
