@@ -157,8 +157,8 @@ window.addEventListener('load', () => {
 window.addEventListener('mousemove', (e) => {
   const photoAccent = document.querySelector('.photo-accent');
   if (photoAccent) {
-    const moveX = (e.clientX * -0.01);
-    const moveY = (e.clientY * -0.01);
+    const moveX = (e.clientX * 0.02);
+    const moveY = (e.clientY * 0.05);
     
     gsap.to(photoAccent, {
       x: moveX,
@@ -168,6 +168,23 @@ window.addEventListener('mousemove', (e) => {
     });
   }
 });
+
+// Add subtle parallax effect to photo accent
+window.addEventListener('mousemove', (e) => {
+  const photoAccent = document.querySelector('.about-photo .photo-accent');
+  if (photoAccent) {
+    const moveX = (e.clientX * 0.02);
+    const moveY = (e.clientY * 0.05);
+    
+    gsap.to(photoAccent, {
+      x: moveX,
+      y: moveY,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }
+});
+
 
 // Highlight active nav button based on current section
 function updateActiveNavButton() {
@@ -246,7 +263,7 @@ allNavTriggers.forEach(btn => {
 
 // ===== HOME PHOTO AUTO ROTATION =====
 (function () {
-  const photos = document.querySelectorAll('.profile-photo');
+  const photos = document.querySelectorAll('#home .profile-photo');
   if (!photos.length) return;
 
   let current = 0;
@@ -255,5 +272,19 @@ allNavTriggers.forEach(btn => {
     photos[current].classList.remove('active');
     current = (current + 1) % photos.length;
     photos[current].classList.add('active');
-  }, 5000); // 5 seconds
+  }, 4000); // 5 seconds
+})();
+
+// ===== ABOUT PHOTO AUTO ROTATION =====
+(function () {
+  const photos = document.querySelectorAll('#about .profile-photo');
+  if (!photos.length) return;
+
+  let current = 0;
+
+  setInterval(() => {
+    photos[current].classList.remove('active');
+    current = (current + 1) % photos.length;
+    photos[current].classList.add('active');
+  }, 4000);
 })();
