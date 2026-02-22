@@ -288,3 +288,27 @@ allNavTriggers.forEach(btn => {
     photos[current].classList.add('active');
   }, 4000);
 })();
+
+// ===== PORTFOLIO: TILE -> SCROLL TO DETAIL =====
+(function () {
+  const tiles = document.querySelectorAll('.project-tile[data-project-target]');
+  if (!tiles.length) return;
+
+  tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      const targetId = tile.dataset.projectTarget;
+      if (!targetId) return;
+
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      // subtle highlight on the selected detail section
+      document.querySelectorAll('.project-detail').forEach(el => el.classList.remove('is-highlight'));
+      target.classList.add('is-highlight');
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+
+

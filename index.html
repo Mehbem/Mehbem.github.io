@@ -269,54 +269,171 @@ scalable research toward quantum repeater technologies.
           <p>A collection of projects showcasing design, analysis, and prototyping work.</p>
         </div>
 
-        <div class="subsection-grid">
-          <div class="subsection-card project-card">
-            <div class="project-number">01</div>
-            <h3>CAD Projects</h3>
-            <p class="card-description">Detailed 3D modeling and assemblies</p>
-            <ul class="link-list">
-              <li><a href="#" class="subsection-link">Robotic Gripper Design</a></li>
-              <li><a href="#" class="subsection-link">Biomechanics Linkage</a></li>
-              <li><a href="#" class="subsection-link">Thermal Housing Assembly</a></li>
-              <li><a href="#" class="subsection-link">Custom Fixtures</a></li>
-            </ul>
-          </div>
+        <!-- Project tiles (small overview cards) -->
+        <div class="project-tiles" aria-label="Project overview tiles">
+          <button class="project-tile" type="button" data-project-target="project-gripper">
+            <div class="project-tile-thumb">
+              <img src="assets/Portfolio/Gripper/thumb.jpg" alt="Robotic gripper thumbnail" loading="lazy">
+            </div>
+            <div class="project-tile-meta">
+              <div class="project-tile-kicker">CAD · Mechanism</div>
+              <h3 class="project-tile-title">Robotic Gripper Design</h3>
+              <p class="project-tile-desc">Compact end-effector concept with motion constraints, manufacturable parts, and assembly planning.</p>
+            </div>
+            <span class="project-tile-chip">Click for details ↓</span>
+          </button>
 
-          <div class="subsection-card project-card">
-            <div class="project-number">02</div>
-            <h3>Analysis Work</h3>
-            <p class="card-description">FEA and simulation studies</p>
-            <ul class="link-list">
-              <li><a href="#" class="subsection-link">Stress Analysis Studies</a></li>
-              <li><a href="#" class="subsection-link">Thermal Simulations</a></li>
-              <li><a href="#" class="subsection-link">Motion Analysis</a></li>
-              <li><a href="#" class="subsection-link">Optimization Reports</a></li>
-            </ul>
-          </div>
+          <button class="project-tile" type="button" data-project-target="project-fixture">
+            <div class="project-tile-thumb">
+              <img src="assets/Portfolio/Fixture/thumb.jpg" alt="Custom fixture thumbnail" loading="lazy">
+            </div>
+            <div class="project-tile-meta">
+              <div class="project-tile-kicker">CNC · Fixturing</div>
+              <h3 class="project-tile-title">Custom Vacuum Chuck</h3>
+              <p class="project-tile-desc">Precision fixturing concept with sealing strategy, vacuum routing, and tolerance-driven design decisions.</p>
+            </div>
+            <span class="project-tile-chip">Click for details ↓</span>
+          </button>
 
-          <div class="subsection-card project-card">
-            <div class="project-number">03</div>
-            <h3>Prototyping</h3>
-            <p class="card-description">Physical builds and testing</p>
-            <ul class="link-list">
-              <li><a href="#" class="subsection-link">3D Printed Components</a></li>
-              <li><a href="#" class="subsection-link">CNC Machined Parts</a></li>
-              <li><a href="#" class="subsection-link">Test Fixtures</a></li>
-              <li><a href="#" class="subsection-link">Assembly Documentation</a></li>
-            </ul>
-          </div>
+          <button class="project-tile" type="button" data-project-target="project-thermal">
+            <div class="project-tile-thumb">
+              <img src="assets/Portfolio/Thermal/thumb.jpg" alt="Thermal housing thumbnail" loading="lazy">
+            </div>
+            <div class="project-tile-meta">
+              <div class="project-tile-kicker">Analysis · Thermal</div>
+              <h3 class="project-tile-title">Thermal Housing Assembly</h3>
+              <p class="project-tile-desc">Housing + heat-path design with quick iterations, interface constraints, and practical assembly details.</p>
+            </div>
+            <span class="project-tile-chip">Click for details ↓</span>
+          </button>
 
-          <div class="subsection-card project-card">
-            <div class="project-number">04</div>
-            <h3>Team Projects</h3>
-            <p class="card-description">Collaborative design work</p>
-            <ul class="link-list">
-              <li><a href="#" class="subsection-link">Senior Capstone</a></li>
-              <li><a href="#" class="subsection-link">Competition Entries</a></li>
-              <li><a href="#" class="subsection-link">Club Projects</a></li>
-              <li><a href="#" class="subsection-link">Hackathons</a></li>
-            </ul>
-          </div>
+          <button class="project-tile" type="button" data-project-target="project-qdot">
+            <div class="project-tile-thumb">
+              <img src="assets/Projects Photos/NWQD Project/QD Detection.jpg" alt="Quantum dot automation thumbnail" loading="lazy">
+            </div>
+            <div class="project-tile-meta">
+              <div class="project-tile-kicker">Automation · Lab Tools</div>
+              <h3 class="project-tile-title">Automated QD Characterization</h3>
+              <p class="project-tile-desc">Hardware + software integration for repeatable measurements, stage control, and fast analysis workflows.</p>
+            </div>
+            <span class="project-tile-chip">Click for details ↓</span>
+          </button>
+        </div>
+
+        <!-- Detailed project sections (scroll target) -->
+        <div class="project-details" aria-label="Project details">
+          <article id="project-gripper" class="project-detail">
+            <div class="project-detail-left">
+              <h3>Robotic Gripper Design</h3>
+              <p class="card-description">CAD · mechanism design · assembly planning</p>
+              <p class="project-detail-text">
+                Full write-up goes here: the objective, constraints, kinematics, design iterations, and what you’d change next time.
+                Add as much text as you want — the images on the right will auto-pack.
+              </p>
+              <ul class="project-detail-bullets">
+                <li>Key constraint / spec</li>
+                <li>What you modeled / manufactured</li>
+                <li>What you learned / improved</li>
+              </ul>
+            </div>
+            <div class="project-detail-right">
+              <div class="project-gallery" data-gallery>
+                <img src="assets/Portfolio/Gripper/1.jpg" alt="Gripper render" loading="lazy">
+                <img src="assets/Portfolio/Gripper/2.jpg" alt="Gripper assembly" loading="lazy">
+                <img src="assets/Portfolio/Gripper/3.jpg" alt="Detail view" loading="lazy">
+                <img src="assets/Portfolio/Gripper/4.jpg" alt="Mechanism sketch" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <article id="project-fixture" class="project-detail">
+            <div class="project-detail-left">
+              <h3>Custom Vacuum Chuck</h3>
+              <p class="card-description">CNC · fixturing · tolerancing</p>
+              <p class="project-detail-text">
+                Full write-up goes here: vacuum path design, sealing surfaces, material choice, machining strategy, and test results.
+              </p>
+              <ul class="project-detail-bullets">
+                <li>Vacuum routing + sealing strategy</li>
+                <li>Workholding repeatability &amp; runout considerations</li>
+                <li>Manufacturing notes</li>
+              </ul>
+            </div>
+            <div class="project-detail-right">
+              <div class="project-gallery" data-gallery>
+                <img src="assets/Portfolio/Fixture/1.jpg" alt="Vacuum chuck top" loading="lazy">
+                <img src="assets/Portfolio/Fixture/2.jpg" alt="Vacuum ports" loading="lazy">
+                <img src="assets/Portfolio/Fixture/3.jpg" alt="Machining setup" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <article id="project-thermal" class="project-detail">
+            <div class="project-detail-left">
+              <h3>Thermal Housing Assembly</h3>
+              <p class="card-description">Thermal analysis · packaging · interfaces</p>
+              <p class="project-detail-text">
+                Full write-up goes here: requirements, heat sources, interface materials, and how the assembly was validated.
+              </p>
+              <ul class="project-detail-bullets">
+                <li>Heat path &amp; mounting constraints</li>
+                <li>DFM + serviceability</li>
+                <li>Simulation / measurement highlights</li>
+              </ul>
+            </div>
+            <div class="project-detail-right">
+              <div class="project-gallery" data-gallery>
+                <img src="assets/Portfolio/Thermal/1.jpg" alt="Thermal assembly" loading="lazy">
+                <img src="assets/Portfolio/Thermal/2.jpg" alt="Thermal simulation" loading="lazy">
+                <img src="assets/Portfolio/Thermal/3.jpg" alt="Interface detail" loading="lazy">
+                <img src="assets/Portfolio/Thermal/4.jpg" alt="Exploded view" loading="lazy">
+                <img src="assets/Portfolio/Thermal/5.jpg" alt="Bench test" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <article id="project-qdot" class="project-detail">
+            <div class="project-detail-left">
+  <h3>Automated QD Characterization</h3>
+  <p class="card-description">Automation · instrumentation · data pipeline</p>
+
+  <div class="project-detail-text">
+    <p>
+      I developed a <strong>MATLAB-based automation platform</strong> to rapidly identify and characterize 
+      <strong>nanowire quantum dots (QDs)</strong> as candidate entangled photon sources for 
+      quantum repeater systems.
+    </p>
+
+    <p>
+      The <strong>NWQD Operating App</strong> integrates ANC300 piezo control, spectrometer acquisition,
+      live imaging, and automated polarization sweeps into a unified interface.
+    </p>
+  </div>
+
+  <h4 class="project-subtitle">Control Architecture</h4>
+  <ul class="project-detail-bullets">
+    <li><strong>Raster Scan</strong> – 200×200 automated grid navigation</li>
+    <li><strong>Specific Movement</strong> – Direct QD targeting with calibrated scaling</li>
+    <li><strong>LED Find</strong> – Centroid-based laser alignment</li>
+    <li><strong>Batch Mode</strong> – Automated emission + FSS sweeps</li>
+  </ul>
+
+  <h4 class="project-subtitle">Performance Impact</h4>
+  <ul class="project-detail-bullets">
+    <li><strong>7466 QDs analyzed</strong></li>
+    <li>Automated peak detection + cosine-fit FSS extraction</li>
+    <li><strong>~200× throughput improvement</strong> vs. manual workflow</li>
+  </ul>
+</div>
+            <div class="project-detail-right">
+              <div class="project-gallery" data-gallery>
+                <img src="assets/Portfolio/QDots/1.jpg" alt="System overview" loading="lazy">
+                <img src="assets/Portfolio/QDots/2.jpg" alt="Optical setup" loading="lazy">
+                <img src="assets/Portfolio/QDots/3.jpg" alt="Automation UI" loading="lazy">
+                <img src="assets\Projects Photos\NWQD Project\QD Plots.jpg" alt="Result plots" loading="lazy">
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
