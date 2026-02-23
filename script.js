@@ -312,3 +312,103 @@ allNavTriggers.forEach(btn => {
 })();
 
 
+
+
+
+// ===== LIGHTBOX: CLICK ANY PORTFOLIO IMAGE TO ENLARGE =====
+(function () {
+  function initLightbox(){
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    const imgEl = lightbox.querySelector('.lightbox-img');
+    const capEl = lightbox.querySelector('.lightbox-caption');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    if (!imgEl || !capEl || !closeBtn) return;
+
+    function openLightbox(src, alt) {
+      imgEl.src = src;
+      imgEl.alt = alt || 'Expanded image';
+      capEl.textContent = alt || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      imgEl.src = '';
+      imgEl.alt = '';
+      capEl.textContent = '';
+    }
+
+    // Delegate clicks (works even if images load later)
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('.project-gallery img');
+      if (!img) return;
+      openLightbox(img.currentSrc || img.src, img.alt);
+    });
+
+    // Keyboard accessibility: focusable images
+    document.querySelectorAll('.project-gallery img').forEach((img) => {
+      img.style.cursor = 'zoom-in';
+      if (!img.hasAttribute('tabindex')) img.setAttribute('tabindex', '0');
+      if (!img.hasAttribute('role')) img.setAttribute('role', 'button');
+      img.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(img.currentSrc || img.src, img.alt);
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Click outside figure closes
+    lightbox.addEventListener('click', (e) => {
+      const fig = lightbox.querySelector('.lightbox-figure');
+      if (fig && !fig.contains(e.target)) closeLightbox();
+    });
+
+    // ESC closes
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+  }
+
+  try{
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLightbox);
+    } else {
+      initLightbox();
+    }
+  } catch(err){
+    console.error('Lightbox init failed:', err);
+  }
+})();
+
+// ===== HOME: "LAST EDITED" + LIVE CLOCK =====
+(function () {
+  const lastEl = document.getElementById('last-edited-ts');
+  const clockEl = document.getElementById('live-clock');
+  if (!lastEl || !clockEl) return;
+
+  // document.lastModified is provided by the browser based on the served file timestamp
+  // (updates when you redeploy and the page is reloaded)
+  const lm = new Date(document.lastModified);
+  const lastEditedText = isNaN(lm.getTime())
+    ? 'unknown'
+    : lm.toLocaleString([], { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+
+  lastEl.textContent = lastEditedText;
+
+  function updateClock() {
+    const now = new Date();
+    clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+})();

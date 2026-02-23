@@ -99,6 +99,13 @@
           <div class="title-accent"></div>
           <p class="lead-text">Nanotechnology Engineering Student </p>
           <p class="institution">University of Waterloo | Class of 2028</p>
+          <p class="last-edited">
+  <span class="last-edited-label">Last edited:</span>
+  <span id="last-edited-ts">loading…</span>
+  <span class="last-edited-sep">·</span>
+  <span class="last-edited-label">Local time:</span>
+  <span id="live-clock">loading…</span>
+</p>
 
           <p class="skills-caption">SKILLS</p>
           
@@ -136,10 +143,10 @@ scalable research toward quantum repeater technologies.
         <div class="home-photo">
           <div class="photo-container">
             <div class="photo-placeholder">
-                <img src="assets\Home Page Photos\Home Page Photo.jpg" alt="Bera Yavuz" class="profile-photo active">
-                <img src="assets\Home Page Photos\photo1.jpg" alt="Bera Yavuz" class="profile-photo">
-                <img src="assets\Home Page Photos\photo2.jpg" alt="Bera Yavuz" class="profile-photo">
-                <img src="assets\Home Page Photos\photo3.jpg" alt="Bera Yavuz" class="profile-photo">
+                <img src="assets/Home Page Photos/Home Page Photo.jpg" alt="Bera Yavuz" class="profile-photo active">
+                <img src="assets/Home Page Photos/photo1.jpg" alt="Bera Yavuz" class="profile-photo">
+                <img src="assets/Home Page Photos/photo2.jpg" alt="Bera Yavuz" class="profile-photo">
+                <img src="assets/Home Page Photos/photo3.jpg" alt="Bera Yavuz" class="profile-photo">
             </div>
           </div>
           <div class="photo-accent"></div>
@@ -177,6 +184,8 @@ scalable research toward quantum repeater technologies.
           <br><br>
           This website was built by me, painstakingly, by asking Claude and ChatGPT to write code and then learning enough CSS and HTML along the way so I could complain properly and edit it exactly how I wanted. I hate the term vibe coding cause, it ain't coding, it is AI doing it, let's be clear. With all that said and done, buckle up for some bugs and forget you have a phone ;)
         </p>
+
+
       </div>
 
       <div class="about-photo">
@@ -267,25 +276,26 @@ scalable research toward quantum repeater technologies.
       <div class="portfolio-content">
         <div class="portfolio-intro">
           <p>A collection of projects showcasing design, analysis, and prototyping work.</p>
+                  <p class="site-hint"><strong>Tip:</strong> Portfolio images are clickable — open any photo full-screen :).</p>
         </div>
 
         <!-- Project tiles (small overview cards) -->
         <div class="project-tiles" aria-label="Project overview tiles">
-          <button class="project-tile" type="button" data-project-target="project-gripper">
+          <button class="project-tile" type="button" data-project-target="project-washer-platform">
             <div class="project-tile-thumb">
-              <img src="assets/Portfolio/Gripper/thumb.jpg" alt="Robotic gripper thumbnail" loading="lazy">
+              <img src="assets\Projects Photos\Washers\Washer On Plate.JPG" alt="project washer platform thumbnail" loading="lazy">
             </div>
             <div class="project-tile-meta">
-              <div class="project-tile-kicker">CAD · Mechanism</div>
-              <h3 class="project-tile-title">Robotic Gripper Design</h3>
-              <p class="project-tile-desc">Compact end-effector concept with motion constraints, manufacturable parts, and assembly planning.</p>
+              <div class="project-tile-kicker">Mechanical Design · Workflow Optimization</div>
+              <h3 class="project-tile-title">Elevated Agitation & Thermal Wash Platform</h3>
+              <p class="project-tile-desc">Chemically resistant elevated platform enabling simultaneous heating and magnetic agitation to accelerate washing and prevent solvent trapping.</p>
             </div>
             <span class="project-tile-chip">Click for details ↓</span>
           </button>
 
           <button class="project-tile" type="button" data-project-target="project-fixture">
             <div class="project-tile-thumb">
-              <img src="assets/Portfolio/Fixture/thumb.jpg" alt="Custom fixture thumbnail" loading="lazy">
+              <img src="assets/Projects Photos/Vacuum Chuck/Vacuum CHuck.JPG" alt="Custom fixture thumbnail" loading="lazy">
             </div>
             <div class="project-tile-meta">
               <div class="project-tile-kicker">CNC · Fixturing</div>
@@ -295,25 +305,25 @@ scalable research toward quantum repeater technologies.
             <span class="project-tile-chip">Click for details ↓</span>
           </button>
 
-          <button class="project-tile" type="button" data-project-target="project-thermal">
+          <button class="project-tile" type="button" data-project-target="project-lithography">
             <div class="project-tile-thumb">
-              <img src="assets/Portfolio/Thermal/thumb.jpg" alt="Thermal housing thumbnail" loading="lazy">
+              <img src="assets/Projects Photos/PS2/Full PS2 Render.png" alt="Lithography System Render" loading="lazy">
             </div>
             <div class="project-tile-meta">
-              <div class="project-tile-kicker">Analysis · Thermal</div>
-              <h3 class="project-tile-title">Thermal Housing Assembly</h3>
-              <p class="project-tile-desc">Housing + heat-path design with quick iterations, interface constraints, and practical assembly details.</p>
+              <div class="project-tile-kicker">Reverse Engineering · CAD · Rendering</div>
+              <h3 class="project-tile-title">Photolithography System: Robust CAD Reconstruction</h3>
+              <p class="project-tile-desc">Engineering-accurate 3D modeling of a two-photon lithography system for technical visualization and product marketing.</p>
             </div>
             <span class="project-tile-chip">Click for details ↓</span>
           </button>
 
           <button class="project-tile" type="button" data-project-target="project-qdot">
             <div class="project-tile-thumb">
-              <img src="assets/Projects Photos/NWQD Project/QD Detection.jpg" alt="Quantum dot automation thumbnail" loading="lazy">
+              <img src="assets/Projects Photos/NWQD Project/QD Detection.png" alt="Quantum dot automation thumbnail" loading="lazy">
             </div>
             <div class="project-tile-meta">
               <div class="project-tile-kicker">Automation · Lab Tools</div>
-              <h3 class="project-tile-title">Automated QD Characterization</h3>
+              <h3 class="project-tile-title">Automated QD (Quantum Dot) Characterization</h3>
               <p class="project-tile-desc">Hardware + software integration for repeatable measurements, stage control, and fast analysis workflows.</p>
             </div>
             <span class="project-tile-chip">Click for details ↓</span>
@@ -322,118 +332,227 @@ scalable research toward quantum repeater technologies.
 
         <!-- Detailed project sections (scroll target) -->
         <div class="project-details" aria-label="Project details">
-          <article id="project-gripper" class="project-detail">
-            <div class="project-detail-left">
-              <h3>Robotic Gripper Design</h3>
-              <p class="card-description">CAD · mechanism design · assembly planning</p>
-              <p class="project-detail-text">
-                Full write-up goes here: the objective, constraints, kinematics, design iterations, and what you’d change next time.
-                Add as much text as you want — the images on the right will auto-pack.
-              </p>
-              <ul class="project-detail-bullets">
-                <li>Key constraint / spec</li>
-                <li>What you modeled / manufactured</li>
-                <li>What you learned / improved</li>
-              </ul>
-            </div>
-            <div class="project-detail-right">
-              <div class="project-gallery" data-gallery>
-                <img src="assets/Portfolio/Gripper/1.jpg" alt="Gripper render" loading="lazy">
-                <img src="assets/Portfolio/Gripper/2.jpg" alt="Gripper assembly" loading="lazy">
-                <img src="assets/Portfolio/Gripper/3.jpg" alt="Detail view" loading="lazy">
-                <img src="assets/Portfolio/Gripper/4.jpg" alt="Mechanism sketch" loading="lazy">
-              </div>
-            </div>
-          </article>
+          <article id="project-washer-platform" class="project-detail">
+  <div class="project-detail-left">
+
+    <h3>Elevated Agitation & Thermal Wash Platform</h3>
+    <p class="card-description">
+      Lab Hardware · Agitation Systems · Chemical Compatibility
+    </p>
+
+    <div class="project-detail-text">
+      <p>
+       Designed and CNC machined a set of <strong>elevated thermo-agitation platforms</strong>
+        to replace a previously manual washing workflow that relied on static solvent exposure. They are easy to assemble but most importanly, easy to use. 
+      </p>
+
+      <p>
+        The system suspends samples above a rotating magnetic stir bar, enabling
+        <strong>simultaneous heating and controlled convective agitation</strong>.
+        This dramatically increased washing speed while ensuring uniform solvent
+        contact from below.
+      </p>
+
+      <p>
+        Fabricated from a <strong>highly chemically resistant material</strong>,
+        the platforms were engineered to withstand aggressive solvents and elevated
+        temperatures while preventing degradation, contamination, and unwanted
+        chemical interaction.
+      </p>
+    </div>
+
+    <h4 class="project-subtitle">Problem Addressed</h4>
+    <ul class="project-detail-bullets">
+      <li>Manual washing required extended soak times</li>
+      <li>Residual solvent occasionally remained trapped beneath samples</li>
+      <li>Inconsistent agitation led to variability in cleaning performance</li>
+    </ul>
+
+    <h4 class="project-subtitle">Design Objectives</h4>
+    <ul class="project-detail-bullets">
+      <li><strong>Magnetic Clearance Optimization</strong> — Tuned elevation height for stable stir-bar coupling</li>
+      <li><strong>Convective Flow Enhancement</strong> — Promoted active solvent circulation beneath samples</li>
+      <li><strong>Chemical Resistance</strong> — Prevented swelling, leaching, or solvent attack</li>
+      <li><strong>Contamination Control</strong> — Non-reactive, cleanable surfaces</li>
+      <li><strong>Integrated Handling Tools</strong> — Designed chemically resistant tweezers as part of the wash system to enable safe, contamination-free sample transfer during heated solvent cycles</li>
+    </ul>
+
+    <h4 class="project-subtitle">Impact</h4>
+    <ul class="project-detail-bullets">
+      <li>Significantly reduced wash time compared to manual soaking</li>
+      <li>Eliminated residual solvent retention beneath samples</li>
+      <li>Improved repeatability across batch treatments</li>
+      <li>Enabled faster turnaround in solvent-intensive workflows</li>
+    </ul>
+
+  </div>
+
+  <div class="project-detail-right">
+    <div class="project-gallery" data-gallery>
+        <video controls playsinline preload="metadata">
+  <source src="assets/Projects Photos/Washers/Washer In Action.mp4" type="video/mp4">
+</video>
+        <img src="assets/Projects Photos/Washers/Washer On Plate.JPG" alt="Washer On Plate" loading="lazy">
+        <img src="assets/Projects Photos/Washers/Washer Set.JPG" alt="Washer Set" loading="lazy">
+        <img src="assets/Projects Photos/Washers/Washer Tweezers.JPG" alt="Washer Tweezers" loading="lazy">
+    </div>
+  </div>
+</article>
 
           <article id="project-fixture" class="project-detail">
-            <div class="project-detail-left">
-              <h3>Custom Vacuum Chuck</h3>
-              <p class="card-description">CNC · fixturing · tolerancing</p>
-              <p class="project-detail-text">
-                Full write-up goes here: vacuum path design, sealing surfaces, material choice, machining strategy, and test results.
-              </p>
-              <ul class="project-detail-bullets">
-                <li>Vacuum routing + sealing strategy</li>
-                <li>Workholding repeatability &amp; runout considerations</li>
-                <li>Manufacturing notes</li>
-              </ul>
-            </div>
+  <div class="project-detail-left">
+
+    <h3>Custom Vacuum Chuck</h3>
+    <p class="card-description">
+      CNC · Precision Fixturing · Vacuum Systems
+    </p>
+
+    <div class="project-detail-text">
+      <p>
+        Designed and CNC-machined a <strong>custom vacuum chuck</strong> to securely fixture delicate,
+        non-planar scaffold structures during precision machining and post-processing operations.
+      </p>
+
+      <p>
+        The system was engineered to provide <strong>repeatable clamping without mechanical distortion</strong>,
+        enabling stable machining while preserving part integrity and surface quality.
+      </p>
+    </div>
+
+    <h4 class="project-subtitle">Design & Engineering Approach</h4>
+    <ul class="project-detail-bullets">
+      <li><strong>Vacuum Routing Strategy</strong> — Optimized internal channel geometry for uniform pressure distribution</li>
+      <li><strong>Flatness & Runout Control</strong> — Tight tolerancing to maintain alignment during machining</li>
+      <li><strong>Material Selection</strong> — Balanced machinability, rigidity, and surface durability</li>
+    </ul>
+
+    <h4 class="project-subtitle">Manufacturing Process</h4>
+    <ul class="project-detail-bullets">
+      <li>CAM toolpath generation and machining strategy planning</li>
+      <li>3-axis CNC milling and precision drilling operations</li>
+      <li>Surface finishing for sealing performance</li>
+      <li>Leak testing and vacuum integrity validation</li>
+    </ul>
+
+    <h4 class="project-subtitle">Impact</h4>
+    <ul class="project-detail-bullets">
+      <li>Enabled distortion-free fixturing of delicate structures</li>
+      <li>Improved machining repeatability and part consistency</li>
+      <li>Reduced setup time compared to mechanical clamping methods</li>
+      <li>Created a reusable workholding platform for future process development</li>
+    </ul>
+
+  </div>
             <div class="project-detail-right">
               <div class="project-gallery" data-gallery>
-                <img src="assets/Portfolio/Fixture/1.jpg" alt="Vacuum chuck top" loading="lazy">
-                <img src="assets/Portfolio/Fixture/2.jpg" alt="Vacuum ports" loading="lazy">
-                <img src="assets/Portfolio/Fixture/3.jpg" alt="Machining setup" loading="lazy">
+                <img src="assets/Projects Photos/Vacuum Chuck/Vacuum CHuck.JPG" alt="Vacuum chuck top" loading="lazy">
+                <img src="assets/Projects Photos/Vacuum Chuck/Vacuum Chuck in Use.JPG" alt="Vacuum chuck in use" loading="lazy">
+                <img src="assets/Projects Photos/Vacuum Chuck/Vacuum Chuck Pins.JPG" alt="Vacuum Chuck Hole Pins" loading="lazy">
+                <img src="assets/Projects Photos/Vacuum Chuck/Vacuum Chuck Top View.JPG" alt="Vacuum Chuck Top View" loading="lazy">
               </div>
             </div>
           </article>
 
-          <article id="project-thermal" class="project-detail">
-            <div class="project-detail-left">
-              <h3>Thermal Housing Assembly</h3>
-              <p class="card-description">Thermal analysis · packaging · interfaces</p>
-              <p class="project-detail-text">
-                Full write-up goes here: requirements, heat sources, interface materials, and how the assembly was validated.
-              </p>
-              <ul class="project-detail-bullets">
-                <li>Heat path &amp; mounting constraints</li>
-                <li>DFM + serviceability</li>
-                <li>Simulation / measurement highlights</li>
-              </ul>
-            </div>
-            <div class="project-detail-right">
-              <div class="project-gallery" data-gallery>
-                <img src="assets/Portfolio/Thermal/1.jpg" alt="Thermal assembly" loading="lazy">
-                <img src="assets/Portfolio/Thermal/2.jpg" alt="Thermal simulation" loading="lazy">
-                <img src="assets/Portfolio/Thermal/3.jpg" alt="Interface detail" loading="lazy">
-                <img src="assets/Portfolio/Thermal/4.jpg" alt="Exploded view" loading="lazy">
-                <img src="assets/Portfolio/Thermal/5.jpg" alt="Bench test" loading="lazy">
-              </div>
-            </div>
-          </article>
+          <article id="project-lithography" class="project-detail">
+  <div class="project-detail-left">
+    
+    <h3>Two-Photon Lithography System</h3>
+    <p class="card-description">
+      Metrology · CAD Reconstruction · Visualization
+    </p>
+
+    <div class="project-detail-text">
+      <p>
+        Developed a <strong>high-fidelity 3D CAD reconstruction</strong> of a two-photon 
+        lithography system by physically measuring the assembled hardware and rebuilding 
+        the full mechanical and optical architecture from scratch.
+      </p>
+
+      <p>
+        While I did not design the original system, I translated the 
+        <strong>real-world product into a dimensionally faithful digital model</strong> 
+        used for marketing visuals, technical communication, and internal documentation.
+      </p>
+    </div>
+
+    <h4 class="project-subtitle">Modeling Process</h4>
+    <ul class="project-detail-bullets">
+      <li><strong>Full-System Metrology</strong> — Precision dimensional measurement using calipers</li>
+      <li><strong>Reverse Engineering</strong> — Structural frames, optics mounts, motion components</li>
+      <li><strong>Parametric Reconstruction</strong> — Organized mechanical assemblies</li>
+      <li><strong>Render Pipeline</strong> — CAD export and Blender integration</li>
+    </ul>
+
+    <h4 class="project-subtitle">Technical Objectives</h4>
+    <ul class="project-detail-bullets">
+      <li>Maintain real-world dimensional correspondence</li>
+      <li>Preserve optical alignment geometry and positioning</li>
+      <li>Create clean, production-ready render geometry</li>
+      <li>Balance visual realism with modeling efficiency</li>
+    </ul>
+
+    <h4 class="project-subtitle">Impact</h4>
+    <ul class="project-detail-bullets">
+      <li>Generated high-quality marketing visuals from engineering-accurate models</li>
+      <li>Enabled internal visualization without physical disassembly</li>
+      <li>Bridged mechanical design and visual communication</li>
+      <li>Produced reusable CAD assets for future documentation and iteration</li>
+    </ul>
+
+  </div>
+
+  <div class="project-detail-right">
+    <div class="project-gallery" data-gallery data-columns="1">
+      <img src="assets/Projects Photos/PS2/Full PS2 Render.png" alt="Lithography System Render" loading="lazy">
+      <img src="assets/Projects Photos/PS2/The Full PS2 CAD.png" alt="Lithography System CAD" loading="lazy">
+  </div>
+</article>
 
           <article id="project-qdot" class="project-detail">
             <div class="project-detail-left">
   <h3>Automated QD Characterization</h3>
-  <p class="card-description">Automation · instrumentation · data pipeline</p>
+  <p class="card-description">
+    Automation · Instrumentation · Data Pipeline
+  </p>
 
   <div class="project-detail-text">
     <p>
-      I developed a <strong>MATLAB-based automation platform</strong> to rapidly identify and characterize 
-      <strong>nanowire quantum dots (QDs)</strong> as candidate entangled photon sources for 
-      quantum repeater systems.
+      I developed a <strong>MATLAB-based automation platform</strong> to rapidly
+      identify and characterize nanowire quantum dots (QDs) as candidate
+      entangled photon sources for quantum repeater systems.
     </p>
 
     <p>
-      The <strong>NWQD Operating App</strong> integrates ANC300 piezo control, spectrometer acquisition,
-      live imaging, and automated polarization sweeps into a unified interface.
+      The <strong>NWQD Operating App</strong> integrates ANC300 piezo stage control,
+      spectrometer acquisition, live imaging, and automated polarization sweeps
+      into a unified experimental interface.
     </p>
   </div>
 
   <h4 class="project-subtitle">Control Architecture</h4>
   <ul class="project-detail-bullets">
-    <li><strong>Raster Scan</strong> – 200×200 automated grid navigation</li>
-    <li><strong>Specific Movement</strong> – Direct QD targeting with calibrated scaling</li>
-    <li><strong>LED Find</strong> – Centroid-based laser alignment</li>
-    <li><strong>Batch Mode</strong> – Automated emission + FSS sweeps</li>
+    <li><strong>Raster Scan</strong> — 200×200 automated grid navigation</li>
+    <li><strong>Specific Movement</strong> — Direct QD targeting with calibrated scaling</li>
+    <li><strong>LED Find</strong> — Centroid-based laser alignment detection</li>
+    <li><strong>Batch Mode</strong> — Automated emission + FSS measurement sweeps</li>
   </ul>
 
   <h4 class="project-subtitle">Performance Impact</h4>
   <ul class="project-detail-bullets">
-    <li><strong>7466 QDs analyzed</strong></li>
+    <li><strong>7466 QDs analyzed</strong> across 50 columns</li>
     <li>Automated peak detection + cosine-fit FSS extraction</li>
     <li><strong>~200× throughput improvement</strong> vs. manual workflow</li>
   </ul>
 </div>
             <div class="project-detail-right">
               <div class="project-gallery" data-gallery>
-                <img src="assets/Portfolio/QDots/1.jpg" alt="System overview" loading="lazy">
-                <img src="assets/Portfolio/QDots/2.jpg" alt="Optical setup" loading="lazy">
-                <img src="assets/Portfolio/QDots/3.jpg" alt="Automation UI" loading="lazy">
+                <img src="assets\Projects Photos\NWQD Project\QD detection software.svg" alt="QD detecetion algorithm" loading="lazy">
+                <img src="assets\Projects Photos\NWQD Project\ANC300 Piezo Driver.jpg" alt="ANC300 Piezo Driver for controling stage" loading="lazy">
+                <img src="assets\Projects Photos\NWQD Project\UI as SVG.svg" alt="Automation UI" loading="lazy">
                 <img src="assets\Projects Photos\NWQD Project\QD Plots.jpg" alt="Result plots" loading="lazy">
               </div>
             </div>
-          </article>
+          </article>  
         </div>
       </div>
     </section>
@@ -493,7 +612,7 @@ scalable research toward quantum repeater technologies.
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2024 Bera Yavuz. All rights reserved.
+    <p>&copy; 2026 Bera Yavuz. All rights reserved.
   </footer>
 
 
@@ -501,6 +620,16 @@ scalable research toward quantum repeater technologies.
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
   <!-- Site JS -->
   <script src="script.js"></script>
+
+
+  <!-- LIGHTBOX (click any portfolio image to enlarge) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+    <figure class="lightbox-figure" role="dialog" aria-modal="true" aria-label="Expanded image viewer">
+      <img class="lightbox-img" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+  </div>
 
 </body>
 </html>

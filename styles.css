@@ -763,11 +763,29 @@ padding: 1rem 0;
   font-size: 0.78rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #000;
+
   background: var(--primary);
+  color: #000;
+
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  box-shadow: 0 0 18px rgba(0, 255, 65, 0.28);
+
+  box-shadow: none;                /* remove glow */
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+
+.project-tile:hover .project-tile-chip {
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+.project-tile:hover .project-tile-chip {
+  background: var(--primary-dark); /* darker green */
+  color: #ffffff;                  /* bright white text */
 }
 
 .project-details {
@@ -801,74 +819,61 @@ padding: 1rem 0;
   pointer-events: none;
 }
 
-.project-detail-left {
-  display: flex;
-  flex-direction: column;
+/* ================================
+   PROJECT TEXT HIERARCHY POLISH
+================================ */
+
+.project-detail-left h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
 }
 
 .project-detail-text {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 600px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.6rem;
+  max-width: 650px;
+}
+
+.project-detail-text p {
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
 .project-subtitle {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--primary);
-  margin-top: 1.2rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .project-detail-bullets {
-  padding-left: 1.4rem;
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 1.2rem;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .project-detail-bullets li {
-  line-height: 1.7;
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-/* ===== MASONRY GALLERY (FULL IMAGE, NO CROPPING) ===== */
-
-
-@media (min-width: 1200px) {
-  .project-gallery {
-    column-count: 3;
-  }
+.project-detail-bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
 }
-
-@media (max-width: 768px) {
-  .project-gallery {
-    column-count: 1;
-  }
-}
-
-.project-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 14px;
-
-  border-radius: 14px;
-  border: 1px solid rgba(0, 255, 65, 0.22);
-  box-shadow: 0 0 22px rgba(0, 255, 65, 0.08);
-
-  break-inside: avoid;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-gallery img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 40px rgba(0, 255, 65, 0.18);
-}
-
 .project-detail.is-highlight {
   border-color: rgba(127, 255, 0, 0.7);
   box-shadow: 0 0 55px rgba(0, 255, 65, 0.12);
@@ -1247,13 +1252,8 @@ padding: 1rem 0;
   }
 
   .project-detail {
-  grid-template-columns: 1fr 1.3fr;
-}
-
-  .project-gallery {
-  column-count: 1;
-  column-gap: 20px;
-}
+    grid-template-columns: 1fr;
+  }
 
   .home-cta {
     flex-direction: column;
@@ -1734,3 +1734,190 @@ justify-content: center;
 .photo-fallback{position:absolute;bottom:12px;left:12px;right:12px;font-size:0.9rem;opacity:0.75;z-index:3;}
 .photo-fallback code{font-family:monospace;}
 
+
+
+/* =========================================================
+   PORTFOLIO GALLERY — BIG, NO CROP, AUTO-ORGANIZED (MASONRY)
+   ========================================================= */
+
+/* Give the gallery (right side) more room */
+.project-detail{
+  grid-template-columns: 1fr 1.35fr;
+  gap: 2rem;
+}
+
+/* Responsive masonry that maximizes image size */
+.project-gallery{
+  column-count: 1;          /* BIG by default */
+  column-gap: 18px;
+  column-fill: balance;
+}
+
+@media (min-width: 1100px){
+  .project-gallery{ column-count: 2; } /* still big, but denser */
+}
+
+@media (max-width: 1000px){
+  .project-detail{ grid-template-columns: 1fr; }
+  .project-gallery{ column-count: 1; column-gap: 14px; }
+}
+
+/* Full image visible (no cropping) */
+.project-gallery img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 18px 0;
+
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 65, 0.22);
+  box-shadow: 0 0 22px rgba(0, 255, 65, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: zoom-in;
+}
+
+.project-gallery img:hover{
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 55px rgba(0, 255, 65, 0.22);
+}
+
+/* Neutralize old JS auto-pack classes (if present) */
+.project-gallery img.is-wide,
+.project-gallery img.is-tall,
+.project-gallery img.is-big{
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+.project-gallery video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 65, 0.22);
+  box-shadow: 0 0 22px rgba(0, 255, 65, 0.08);
+}
+
+/* Per-project gallery column control */
+.project-gallery[data-columns="1"]{
+  column-count: 1 !important;
+}
+
+.project-gallery[data-columns="2"]{
+  column-count: 2;
+}
+
+/* On smaller screens everything becomes 1 column anyway */
+@media (max-width: 1000px){
+  .project-gallery[data-columns="2"]{
+    column-count: 1;
+  }
+}
+
+
+/* =========================================================
+   LIGHTBOX + CLICKABLE GALLERY IMAGES
+   ========================================================= */
+
+.site-hint{
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  max-width: 900px;
+  opacity: 0.95;
+}
+.site-hint strong{ color: var(--primary); }
+
+/* Lightbox overlay */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  z-index: 3000;
+}
+
+.lightbox.is-open{ display: flex; }
+
+.lightbox-figure{
+  margin: 0;
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+  width: 100%;
+  background: rgba(15, 19, 15, 0.92);
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 0 70px rgba(0, 255, 65, 0.16);
+  overflow: hidden;
+}
+
+.lightbox-img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.lightbox-caption{
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(0, 255, 65, 0.18);
+}
+
+.lightbox-close{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  background: rgba(15, 19, 15, 0.92);
+  color: var(--text-primary);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox-close:hover{
+  transform: translateY(-2px);
+  border-color: rgba(127, 255, 0, 0.8);
+  box-shadow: 0 0 50px rgba(0, 255, 65, 0.18);
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .project-gallery img,
+  .lightbox-close{ transition: none; }
+}
+
+.last-edited{
+  margin-top: -0.6rem;   /* pull it upward */
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2px;
+}
+
+.last-edited-label{
+  color: var(--text-secondary);
+}
+
+.last-edited-sep{
+  margin: 0 0.5rem;
+  opacity: 0.55;
+}
