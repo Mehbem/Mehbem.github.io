@@ -2136,8 +2136,45 @@ justify-content: center;
    image is visible without scrolling (desktop two-column view). */
 @media (min-width: 1025px) {
   #about .about-photo {
-    width: clamp(240px, calc((100vh - 200px) * 0.8), 460px);
+    /* as large as the viewport height allows, never wider than its column */
+    width: min(100%, clamp(300px, calc((100vh - 189px) * 0.8), 620px));
     justify-self: center;
     top: 96px;        /* sit just below the fixed nav when it sticks */
+  }
+}
+
+
+/* =========================================================
+   PORTFOLIO: COMPACT HEADER SO ALL TILES SIT HIGHER (appended)
+   Reclaims the large header/intro whitespace and tightens the
+   tiles a touch so both rows come up into view on desktop.
+   ========================================================= */
+@media (min-width: 1025px) {
+  #portfolio.section { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  #portfolio .section-header { margin-bottom: 1.1rem; }
+  #portfolio .section-title { margin-bottom: 0.6rem; }
+  #portfolio .portfolio-intro { margin-bottom: 0.6rem; }
+  #portfolio .site-hint { margin-top: 0.6rem; }
+  #portfolio .project-tiles { margin-top: 1.1rem; gap: 1.25rem; }
+
+  /* slightly more compact tiles so two rows fit higher up */
+  #portfolio .project-tile { padding: 0.9rem; }
+  #portfolio .project-tile-meta { margin-top: 0.6rem; }
+  #portfolio .project-tile-title { margin: 0.35rem 0; }
+  #portfolio .project-tile-desc { margin-top: 0.35rem; }
+}
+
+
+/* Shorter thumbnails + capped blurb so all 7 tiles fit in view */
+@media (min-width: 1025px) {
+  #portfolio .project-tile-thumb {
+    aspect-ratio: auto;
+    height: 118px;
+  }
+  #portfolio .project-tile-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
